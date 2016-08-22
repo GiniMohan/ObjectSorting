@@ -53,8 +53,7 @@ public class JsonParser implements Parser {
 					ownerObj.setAge(age);
 					List<Pet> petList = new ArrayList<Pet>();
 					if (!jsonObject.get(Constants.PETS).equals(null)) {
-					//	JSONObject pets = jsonObject.getJSONObject("pets");
-						JSONArray jsonArray1 = jsonObject.getJSONArray("pets");
+						JSONArray jsonArray1 = jsonObject.getJSONArray(Constants.PETS);
 						if (jsonArray1 != null) {
 							int cnt = jsonArray1.length();
 							for (int j = 0; j < cnt; j++) {
